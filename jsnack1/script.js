@@ -13,9 +13,11 @@ while(sum < 50)
     numbersArray.push(number);
     // Add the number to the sum
     sum += number;
-    // Print the sum in the console
-    console.log("The sum so far is: " + sum);
+    // Print the sum and the array to the console
+    console.log("The sum of the numbers is: " + sum);
+    console.log("The numbers are: " + numbersArray);
 
+    // If the sum is greater than or equal to 50, exit the loop
     if(sum >= 50)
     {
         break;
@@ -23,4 +25,4 @@ while(sum < 50)
 }
 
 // Now, I print the final result in the HTML page
-document.getElementById("result").innerHTML = "The sum of the numbers is: " + sum;
+document.getElementById("result").innerHTML = "The sum of the numbers is: " + sum + "<br>" + "The numbers are: " + numbersArray;
