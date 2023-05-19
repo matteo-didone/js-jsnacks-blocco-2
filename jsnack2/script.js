@@ -49,5 +49,5 @@ guessesContainer.appendChild(userGuessParagragh);
 guessesContainer.appendChild(numberOfGuessesParagraph);
 
 //Display the guest's name in the document
-userGuessParagragh.innerHTML = "Your guess: " + userGuess;
+userGuessParagragh.innerHTML = "Right guess: " + userGuess;
 numberOfGuessesParagraph.innerHTML = "Number of guesses: " + numberOfGuesses;
