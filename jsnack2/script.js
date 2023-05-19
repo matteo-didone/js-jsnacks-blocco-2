@@ -14,7 +14,7 @@ let numberOfGuesses = 0;
 let correctGuess = false;
 
 //Keep asking the user to guess a number, up until the user exactly guesses the correct number
-while(userGuess === randomNumber && correctGuess === false)
+while(correctGuess === false)
 {
     userGuess = parseInt(prompt("Guess a number between 1 and 100: "));
     numberOfGuesses++;
