@@ -3,7 +3,7 @@ const randomNumber = Math.floor(Math.random() * 100) + 1;
 //Math.random() generates a random number between 0 and 1 (excluded)
 //Math.floor() rounds the number down to the nearest integer
 //Times 100 to get a number between 0 and 100 (excluded)
-//Plus 1 to get a number between 1 and 101 (excluded)
+//Plus 1 to get a number between 1 and 100 (included)
 
 
 //Create a variable to store the user's guess number
