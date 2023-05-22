@@ -4,7 +4,7 @@ let sum = 0;
 const numberOfTimes = 10;
 
 //Start asking input to the user for 10 times 
-for(let i = 0; i < numberOfTimes; i++)
+for(let i = 0; i <= numberOfTimes; i++)
 {
     let number = parseFloat(prompt("Enter a number: "));
     if(isNaN(number))
