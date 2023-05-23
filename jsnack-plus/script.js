@@ -6,6 +6,12 @@
  * 
  * BONUS:
  * If we click on the li text, the text will be crossed 
+ * 
+ * HINT:
+ * We can use the class crossed to cross the text
+ * 
+ * EXTRA BONUS:
+ * When clicking again on the li text, the text will be uncrossed
  */
 
 // I need to store into a variable the ul-parent
@@ -33,6 +39,12 @@ for(let i = 0; i <10; i++)
 {
     ulParent.appendChild(createLiElement(prompt("Insert text: ")));
 }
+
+liElement.addEventListener("click", function() 
+{
+    // Remove the class crossed to the li element
+    liElement.classList.renove("crossed");
+});
 
 
 
