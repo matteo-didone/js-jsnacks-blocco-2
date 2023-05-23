@@ -28,7 +28,7 @@ function createLiElement(text)
     liElement.addEventListener("click", function() 
     {
         // Add the class crossed to the li element
-        liElement.classList.add("crossed");
+        liElement.classList.toggle("crossed");
     });
     // Return the li element
     return liElement;
@@ -40,11 +40,7 @@ for(let i = 0; i <10; i++)
     ulParent.appendChild(createLiElement(prompt("Insert text: ")));
 }
 
-liElement.addEventListener("click", function() 
-{
-    // Remove the class crossed to the li element
-    liElement.classList.renove("crossed");
-});
+
 
 
 
