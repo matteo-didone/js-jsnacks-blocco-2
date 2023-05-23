@@ -31,7 +31,7 @@ function createLiElement(text)
 // I need to add 10 li elements to the ul
 for(let i = 0; i <10; i++) 
 {
-    ulParent.appendChild(createLiElement(console.prompt("Insert text: ")));
+    ulParent.appendChild(createLiElement(prompt("Insert text: ")));
 }
 
 
