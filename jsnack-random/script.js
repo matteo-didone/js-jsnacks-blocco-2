@@ -27,7 +27,7 @@ function set ()
     for (let i = 0; i < 4; i++) //loop four times
     {
         // Generate a random index within the array's length
-        const randomIndex = Math.floor(Math.random() * array.length);
+        const randomIndex = Math.floor(Math.random() * beginningSet.length);
 
         // Access the element at the random index
         const randomElement = randomSet[randomIndex];
