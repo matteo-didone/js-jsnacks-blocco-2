@@ -12,8 +12,9 @@ const randomNumber = generateRandomNumber(1, 5);
 //Generate a set of three random numbers that are different from each other
 const setOfFour = set(); //Call the function set()
 
-//Print the set to the console
+//Print the random set to the console
 console.log(setOfFour);
+
 
 //Print the set to the HTML page
 const setElement = document.getElementById("set");
@@ -36,8 +37,7 @@ function set ()
         randomSet.push(randomElement);
     }
 
-    // Print the new array to the console
-    console.log(randomSet);
+    return randomSet; //return the new array
 }
 
 function generateRandomNumber(min, max) 
