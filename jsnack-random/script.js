@@ -25,18 +25,26 @@ function set ()
     const beginningSet = ['1','2','3','4','5']; //create a new empty array
     const randomSet = []; //create a new empty array
 
-    for (let i = 0; i < 4; i++) //loop four times
+    while (randomSet.length < 4) 
     {
-        // Generate a random index within the array's length
+        // Generate a random index
         const randomIndex = Math.floor(Math.random() * beginningSet.length);
-
-        // Access the element at the random index
+        // Get the element at the random index
         const randomElement = beginningSet[randomIndex];
 
-        // Push the element into the new array
-        randomSet.push(randomElement);
+        // Check if the randomElement is already present in randomSet
+        if (!randomSet.includes(randomElement)) 
+        {
+            // If not present, then add it to randomSet
+            randomSet.push(randomElement);
+        }
+        else if (randomSet.includes(randomElement))
+        {
+            // If present, then generate a new randomElement
+            const randomIndex = Math.floor(Math.random() * beginningSet.length);
+            const randomElement = beginningSet[randomIndex];
+        }
     }
-
     return randomSet; //return the new array
 }
 
