@@ -25,9 +25,9 @@ while
 )    
 {
     // Ask the user for the range of numbers and the number of elements in the set
-    rangeStart = prompt("What's the number from which you'd want the range to start?"); // The first number in the range
-    rangeEnd = prompt("What's the number from which you'd want the range to end?"); // The last number in the range
-    numberElements = prompt("How many elements would you like to have in the new array?"); // The number of elements in the set
+    rangeStart = parseInt(prompt("What's the number from which you'd want the range to start?")); // The first number in the range
+    rangeEnd = parseInt(prompt("What's the number from which you'd want the range to end?")); // The last number in the range
+    numberElements = parseInt(prompt("How many elements would you like to have in the new array?")); // The number of elements in the set
 }
 
 // Generate a set of random numbers that are different from each other
