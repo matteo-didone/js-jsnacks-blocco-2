@@ -21,7 +21,7 @@ setElement.innerHTML = setOfFour;
 
 function set () 
 {
-    const beginningSet = [1,2,3,4,5]; //create a new empty array
+    const beginningSet = ['1','2','3','4','5']; //create a new empty array
     const randomSet = []; //create a new empty array
 
     for (let i = 0; i < 4; i++) //loop four times
