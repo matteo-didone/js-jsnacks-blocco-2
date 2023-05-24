@@ -45,7 +45,7 @@ function set ()
             const randomElement = beginningSet[randomIndex];
         }
     }
-    return randomSet; //return the new array
+    return randomSet; //Return the new array
 }
 
 function generateRandomNumber(min, max) 
