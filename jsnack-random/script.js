@@ -30,7 +30,7 @@ function set ()
         const randomIndex = Math.floor(Math.random() * beginningSet.length);
 
         // Access the element at the random index
-        const randomElement = randomSet[randomIndex];
+        const randomElement = beginningSet[randomIndex];
 
         // Push the element into the new array
         randomSet.push(randomElement);
