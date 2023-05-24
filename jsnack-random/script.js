@@ -10,12 +10,7 @@ const randomNumber = generateRandomNumber(1, 5);
 //Plus 1 to get a number between 1 and 5 (included)
 
 //Generate a set of three random numbers that are different from each other
-const setOfFour = set(); //Call the function set()
-
-//Print the set to the console
-console.log(setOfFour);
-
-//Print the set to the HTML page 
+const setOfThree = set(); //Call the function set()
 
 function set () 
 {
@@ -34,7 +29,8 @@ function set ()
         randomSet.push(randomElement);
     }
 
-    return randomSet;
+    // Print the new array to the console
+    console.log(randomSet);
 }
 
 function generateRandomNumber(min, max) 
