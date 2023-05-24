@@ -10,14 +10,21 @@ const randomNumber = generateRandomNumber(1, 5);
 //Plus 1 to get a number between 1 and 5 (included)
 
 //Generate a set of three random numbers that are different from each other
-const setOfThree = set(); //Call the function set()
+const setOfFour = set(); //Call the function set()
+
+//Print the set to the console
+console.log(setOfFour);
+
+//Print the set to the HTML page
+const setElement = document.getElementById("set");
+setElement.innerHTML = setOfFour;
 
 function set () 
 {
     const beginningSet = [1,2,3,4,5]; //create a new empty array
     const randomSet = []; //create a new empty array
 
-    for (let i = 0; i < 3; i++) //loop three times
+    for (let i = 0; i < 4; i++) //loop four times
     {
         // Generate a random index within the array's length
         const randomIndex = Math.floor(Math.random() * array.length);
