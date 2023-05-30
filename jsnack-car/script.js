@@ -39,22 +39,27 @@ for(let i = 0; i < cars.length; i++)
     }
 }
 
+// Print the array
 console.log(petrolCars);
 
 // In the second array, only include diesel cars. // foreach loop
 const dieselCars = [];
 
+// car is a variable that represents each individual element of the array
 cars.forEach((car) => 
 {
+    // If the fuel type of the car is diesel, push it to the dieselCars array
     if(car.fuel === 'Diesel')
     {
         dieselCars.push(car);
     }
 });
 
+// Print the array
 console.log(dieselCars);
 
 // In the third array, include the remaining cars. // array.filter
 const remainingCars = cars.filter((car) => car.fuel !== 'Petrol' && car.fuel !== 'Diesel');
 
+// Print the array
 console.log(remainingCars);
