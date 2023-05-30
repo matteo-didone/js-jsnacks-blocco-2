@@ -1,50 +1,60 @@
-//Create an array of 10 objects representing bell peppers, specifying the variety, weight, and length for each. Calculate the total weight of all the bell peppers.
+/**
+Divide the cars into 3 separate arrays:
 
-const bellPeppers = 
+In the first array, only include petrol cars. // for loop
+In the second array, only include diesel cars. // foreach loop
+In the third array, include the remaining cars. // array.filter
+Finally, print the 3 arrays separately.
+*/
+
+/*Create an array composed of 15 cars.
+Each car object will have the following properties: brand, model, and fuel type (petrol, diesel, LPG, electric, methane).*/
+const cars =
 [
-    { variety: "Red Bell Pepper", weight: 150, length: 10 },
-    { variety: "Yellow Bell Pepper", weight: 180, length: 12 },
-    { variety: "Green Bell Pepper", weight: 120, length: 9 },
-    { variety: "Orange Bell Pepper", weight: 160, length: 11 },
-    { variety: "Purple Bell Pepper", weight: 140, length: 8 },
-    { variety: "White Bell Pepper", weight: 130, length: 7 },
-    { variety: "Black Bell Pepper", weight: 170, length: 13 },
-    { variety: "Brown Bell Pepper", weight: 190, length: 14 },
-    { variety: "Pink Bell Pepper", weight: 200, length: 15 },
-    { variety: "Blue Bell Pepper", weight: 210, length: 16 }
-];
+    { brand: 'Audi', model: 'A4', fuel: 'Petrol' },
+    { brand: 'Ford', model: 'Mustang', fuel: 'Petrol' },
+    { brand: 'BMW', model: 'X5', fuel: 'Diesel' },
+    { brand: 'Fiat', model: '500', fuel: 'LPG' },
+    { brand: 'Tesla', model: 'Model 3', fuel: 'Electric' },
+    { brand: 'Fiat', model: 'Panda', fuel: 'Methane' },
+    { brand: 'Audi', model: 'A3', fuel: 'Petrol' },
+    { brand: 'Volkswagen', model: 'Golf', fuel: 'Diesel' },
+    { brand: 'Ford', model: 'Focus', fuel: 'Petrol' },
+    { brand: 'Hyundai', model: 'Sonata', fuel: 'LPG' },
+    { brand: 'Tesla', model: 'Model S', fuel: 'Electric' },
+    { brand: 'Mercedes-Benz', model: 'E-Class', fuel: 'Petrol' },
+    { brand: 'BMW', model: 'X3', fuel: 'Diesel' },
+    { brand: 'Fiat', model: 'Punto', fuel: 'Petrol' }, 
+    { brand: 'Volkswagen', model: 'Polo', fuel: 'Diesel' }
+]
 
-// Function that calculates the total weight of all the bell peppers.
-function calculateWeightOfBellPeppers()
+// In the first array, only include petrol cars. // for loop
+const petrolCars = [];
+
+for(let i = 0; i < cars.length; i++)
 {
-    // Calculate the total weight of all the bell peppers.
-    let totalWeight = 0;
-
-    // Loop through the array of bell peppers.
-    for (let i = 0; i < bellPeppers.length; i++)
+    if(cars[i].fuel === 'Petrol')
     {
-        // Add the weight of each bell pepper to the total weight.
-        totalWeight += bellPeppers[i].weight;
+        petrolCars.push(cars[i]);
     }
-    // Return the total weight of all the bell peppers.
-    return totalWeight;
 }
 
-// Call the function that calculates the total weight of all the bell peppers.
-console.log(calculateWeightOfBellPeppers());
+console.log(petrolCars);
 
-// Bonus:
-// Create a bell pepper using a function.
-function createBellPepper(variety, weight, length)
+// In the second array, only include diesel cars. // foreach loop
+const dieselCars = [];
+
+cars.forEach((car) => 
 {
-    // Return a bell pepper object.
-    return { variety, weight, length };
-}
+    if(car.fuel === 'Diesel')
+    {
+        dieselCars.push(car);
+    }
+});
 
-// Extra Bonus: Add the bell pepper to the array of bell peppers.
-function addBellPepperToArray(bellPepper)
-{
-    // Add the bell pepper to the array of bell peppers.
-    bellPeppers.push(bellPepper);
-}
+console.log(dieselCars);
 
+// In the third array, include the remaining cars. // array.filter
+const remainingCars = cars.filter((car) => car.fuel !== 'Petrol' && car.fuel !== 'Diesel');
+
+console.log(remainingCars);
