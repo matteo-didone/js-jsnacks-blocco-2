@@ -33,20 +33,25 @@ console.log(stringsEnd); // ['Pippo', 'Pluto', 'Paperino']
 
 // I declare a new array of strings that will contain the strings of the first array formatted in the opposite case
 const stringsOppositeFormat = stringsStart.map((string) => {
+    // Inside the callback function, each string in the stringsStart array is transformed using the following steps:
     const oppositeCaseString = string
       .split('') // Split the string into an array of characters
+        // The map() function applies a provided callback function to each element of the array and creates a new array with the results of the callback function applied to each element.
         .map((character) => {
+            // If the character is uppercase, convert it to lowercase
             if (character === character.toUpperCase()) 
             {
-            return character.toLowerCase();
+                return character.toLowerCase();
             } 
+            // If the character is lowercase, convert it to uppercase.
             else if (character === character.toLowerCase()) 
             {
-            return character.toUpperCase();
+                return character.toUpperCase();
             }
         })
         .join(''); // Join the array of characters back into a string
 
+    // This will return the stringn array with the opposite case
     return oppositeCaseString;
 });
 
