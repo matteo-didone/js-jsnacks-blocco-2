@@ -1,65 +1,53 @@
 /**
-Divide the cars into 3 separate arrays:
+ *
+ *
+ *
+Given an array of strings, create a second array by formatting the strings from the first array in lowercase with an uppercase initial letter.
 
-In the first array, only include petrol cars. // for loop
-In the second array, only include diesel cars. // foreach loop
-In the third array, include the remaining cars. // array.filter
-Finally, print the 3 arrays separately.
-*/
+Example: ['pippo', 'PLUTO', 'PapERino'] => ['Pippo', 'Pluto', 'Paperino']
 
-/*Create an array composed of 15 cars.
-Each car object will have the following properties: brand, model, and fuel type (petrol, diesel, LPG, electric, methane).*/
-const cars =
-[
-    { brand: 'Audi', model: 'A4', fuel: 'Petrol' },
-    { brand: 'Ford', model: 'Mustang', fuel: 'Petrol' },
-    { brand: 'BMW', model: 'X5', fuel: 'Diesel' },
-    { brand: 'Fiat', model: '500', fuel: 'LPG' },
-    { brand: 'Tesla', model: 'Model 3', fuel: 'Electric' },
-    { brand: 'Fiat', model: 'Panda', fuel: 'Methane' },
-    { brand: 'Audi', model: 'A3', fuel: 'Petrol' },
-    { brand: 'Volkswagen', model: 'Golf', fuel: 'Diesel' },
-    { brand: 'Ford', model: 'Focus', fuel: 'Petrol' },
-    { brand: 'Hyundai', model: 'Sonata', fuel: 'LPG' },
-    { brand: 'Tesla', model: 'Model S', fuel: 'Electric' },
-    { brand: 'Mercedes-Benz', model: 'E-Class', fuel: 'Petrol' },
-    { brand: 'BMW', model: 'X3', fuel: 'Diesel' },
-    { brand: 'Fiat', model: 'Punto', fuel: 'Petrol' }, 
-    { brand: 'Volkswagen', model: 'Polo', fuel: 'Diesel' }
-]
+ */
 
-// In the first array, only include petrol cars. // for loop
-const petrolCars = [];
+// First array of strings
+const stringsStart = ['pippo', 'PLUTO', 'PapERino'];
 
-for(let i = 0; i < cars.length; i++)
-{
-    if(cars[i].fuel === 'Petrol')
-    {
-        petrolCars.push(cars[i]);
+// I declare a new array of strings that will contain the strings of the first array formatted in lowercase with an uppercase initial letter 
+
+//The map() function applies a provided callback function to each element of the array and creates a new array with the results of the callback function applied to each element. 
+const stringsEnd = stringsStart.map((string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+    // Inside the callback function, each string in the stringsStart array is transformed using the following steps:
+    // string.charAt(0) retrieves the first character of the string.
+    // .toUpperCase() converts the first character to uppercase.
+    // string.slice(1) extracts the remaining part of the string starting from the second character.
+    // .toLowerCase() converts the remaining part of the string to lowercase.
     }
-}
+);
 
-// Print the array
-console.log(petrolCars);
+//After the map() function iterates through all the strings in the stringsStart array, the stringsEnd array will contain the formatted strings with the first letter capitalized and the rest in lowercase.
 
-// In the second array, only include diesel cars. // foreach loop
-const dieselCars = [];
+// Print the second array of strings
+console.log(stringsEnd); // ['Pippo', 'Pluto', 'Paperino']
 
-// car is a variable that represents each individual element of the array
-cars.forEach((car) => 
-{
-    // If the fuel type of the car is diesel, push it to the dieselCars array
-    if(car.fuel === 'Diesel')
-    {
-        dieselCars.push(car);
-    }
+// Bonus: Given the stringsStart Array, create a third array containing the strings of the first array formatted in the opposite case: so, it'll be "PIPPO", "pluto", "pAPerINO"
+
+// I declare a new array of strings that will contain the strings of the first array formatted in the opposite case
+const stringsOppositeFormat = stringsStart.map((string) => {
+    const oppositeCaseString = string
+      .split('') // Split the string into an array of characters
+        .map((character) => {
+            if (character === character.toUpperCase()) 
+            {
+            return character.toLowerCase();
+            } 
+            else if (character === character.toLowerCase()) 
+            {
+            return character.toUpperCase();
+            }
+        })
+        .join(''); // Join the array of characters back into a string
+
+    return oppositeCaseString;
 });
 
-// Print the array
-console.log(dieselCars);
-
-// In the third array, include the remaining cars. // array.filter
-const remainingCars = cars.filter((car) => car.fuel !== 'Petrol' && car.fuel !== 'Diesel');
-
-// Print the array
-console.log(remainingCars);
+console.log(stringsOppositeFormat); // ['PIPPO', 'pluto', 'pAPerINO']
