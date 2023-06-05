@@ -23,8 +23,22 @@
 
                 <!-- Vue Code Here -->
                 <div id="app">
-                    <h1>{{ message }}</h1>
-                    <img :src="image" alt="random-picture">
+                    <h2>Iterating over an array:</h2>
+
+                    <ul>
+                        <!-- Vue directive (v-for) used within the <li> element to create a loop that iterates over the array data property defined in your Vue component. -->
+
+                        <!-- v-for="item in array": This directive binds each item in the array to the variable item in the loop. It creates a new <li> element for each item in the array. -->
+
+                        <!-- :key="item": This directive assigns a unique key to each <li> element. This is required for Vue to keep track of each element in the DOM. -->
+                        <li v-for="item in array" :key="item">{{ item }}</li>
+                    </ul>
+
+                    <h2>Printing the first 10 numbers:</h2>
+
+                    <ul>
+                        <li v-for="number in numbers" :key="number">{{ number }}</li>
+                    </ul>
                 </div>
 
             </div>
